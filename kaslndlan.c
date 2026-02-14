@@ -7,7 +7,11 @@ int main() {
 	
 	int i, j, k;
 	int x;
-	string names[4] = {"nick.burrie@dlsu.edu.ph", "alfonso.cauilan@dlsu.edu.ph", "mike.alvin@dlsu.edu.ph", "james.buffer@dlsu.edu.ph"};
+	string names[5] = {"nick.burrie@dlsu.edu.ph",
+						 "jordan.peterson@gmail.edu.ph",
+	  					"alfonso.cauilan@dlsu.edu.ph",
+	  					 "mike.alvin@dlsu.edu.ph",
+	   					 "james.buffer@dlsu.edu.ph"};
 	string sorted;
 	int size = sizeof(names) / sizeof(names[0]);
 	string extracted[size];
@@ -43,7 +47,7 @@ int main() {
 		}
 	}
 	
-	for(int k = 0; k < 4; k++){
+	for(int k = 0; k < size; k++){
 		printf("%d. %s\n", k+1, names[k]);
 	}
 	
