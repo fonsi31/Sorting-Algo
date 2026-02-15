@@ -3,19 +3,37 @@
 
 typedef char string[30];
 
+void sortemails(string names[], int size);
+
 int main() {
+	
+	string emails[5];
+	
+	for(int i = 0; i < 5; i++){
+		scanf("%s", emails[i]);
+	}
+	
+	int size = sizeof(emails) / sizeof(emails[0]);
+	
+	sortemails(emails, size);
+
+	
+	for(int k = 0; k < 5; k++){
+		printf("%d. %s\n", k+1, emails[k]);
+	}
+	
+           
+	return 0;
+
+}
+
+void sortemails(string *names, int size){
 	
 	int i, j, k;
 	int x;
-	string names[5] = {"nick.burrie@dlsu.edu.ph",
-						 "jordan.peterson@gmail.edu.ph",
-	  					"alfonso.cauilan@dlsu.edu.ph",
-	  					 "mike.alvin@dlsu.edu.ph",
-	   					 "james.buffer@dlsu.edu.ph"};
 	string sorted;
-	int size = sizeof(names) / sizeof(names[0]);
 	string extracted[size];
-	
+
 	for(k = 0; k < size; k++){
 		char *dot, *at;
 		dot = strchr(names[k], '.');
@@ -47,12 +65,5 @@ int main() {
 		}
 	}
 	
-	for(int k = 0; k < size; k++){
-		printf("%d. %s\n", k+1, names[k]);
-	}
-	
-           
-	return 0;
-
 }
 
